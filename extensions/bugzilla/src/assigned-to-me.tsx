@@ -1,5 +1,5 @@
 import { FetchBugs } from "./components/bugs";
 
 export default function Command(): JSX.Element {
-  return <FetchBugs navigationTitle="Open Bugs Assigned To Me" currentUserSearchParam="assigned_to" />;
+  return <FetchBugs currentUserSearchParam="assigned_to" />;
 }

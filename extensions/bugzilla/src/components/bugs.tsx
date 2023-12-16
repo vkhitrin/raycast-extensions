@@ -10,7 +10,6 @@ import { ManageInstanceEmptyView } from "./manageInstance";
 export interface FetchProps {
   bugs?: string[];
   currentUserSearchParam: string;
-  navigationTitle: string;
   quicksearch?: boolean;
 }
 
@@ -242,7 +241,6 @@ export function QuicksearchBugs() {
   return (
     <List
       searchBarAccessory={<BugzillaDropdown instanceList={bugzillaList} />}
-      navigationTitle="Quick Search"
       isLoading={isLoading}
       searchBarPlaceholder="Execute Quick Search Query"
       filtering={false}
@@ -332,7 +330,6 @@ export function FetchBugs(props: FetchProps) {
   return (
     <List
       searchBarAccessory={<BugzillaDropdown instanceList={bugzillaList} />}
-      navigationTitle={props.navigationTitle}
       isLoading={isLoading}
       searchBarPlaceholder="Filter Bugs"
     >
